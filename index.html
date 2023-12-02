@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <script src="https://unpkg.com/imask" defer></script>
+</head>
+<body>
+<main>
+
+<section class="section1">
+<div class="cardFront">
+  <img class="logocircles" src="card-logo.svg" alt="">
+  <p class="cardNumber"></p>
+  <p class="cardNameDate"><span class="cardName">Jane Appleseed</span><span class="cardMY">
+    <span class="cardMM" maxlength="2"></span>/<span class="cardYY"></span></span></p>
+ 
+</div>
+<div class="cardBack">
+  <p class="cardCVC"></p>
+</div>  
+</section>
+
+<section class="section2">
+<form>
+  <label class="labels" for="fullname">Cardholder Name</label>
+  <div class="borderInFocus">  
+    <input type="text" name="fullname" id="fullname" placeholder="e.g. Jane Appleseed" maxlength="50">
+  </div>
+  <p class="errorText"></p> 
+  <label class="labels" for="number">Card Number</label>
+  <div class="borderInFocus">
+  <input type="text" id="number" name="number" placeholder="e.g. 1234 5678 9123 0000 " maxlength="23">
+  </div>
+  <p class="errorText"></p>
+<div class="expdateAndcvcdiv">
+
+  <p class="labels expDatelabel" for="expdate">Exp. Date (MM/YY)</p>
+  <p class="labels" for="cvc">CVC</p> 
+
+<div class="borderInFocus">
+<input type="number" name="mm" id="mm" placeholder="MM" maxlength="2">
+</div>
+<div class="borderInFocus">
+<input type="number" name="yy" id="yy" placeholder="YY" maxlength="2">
+</div>
+<div class="borderInFocus">
+<input type="number" name="cvc" id="cvc" placeholder="e.g. 123" maxlength="3">
+</div>
+<p class="errorText"></p><p class="errorText"></p><p class="errorText"></p>
+</div>
+  <button type="submit">Confirm</button>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Suslenkova Svitlana</a>.
+  </div> 
+</form>
+</section>
+
+  <!-- Completed state start -->
+<section class="section3">
+  <img class="iconComplete" src="icon-complete.svg" alt="">
+  <h1>Thank you!</h1>
+  <p class="weAdded">We've added your card details</p>
+  <button type="submit"> Continue/return</button>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Suslenkova Svitlana</a>.
+  </div>
+</section>
+</main>
+</body>
+<script src="script.js" defer></script>
+</html>

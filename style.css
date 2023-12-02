@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+* {box-sizing: border-box;}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+main {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+}
+.section1 {
+    width: 100vw;
+    height: 240px;
+    overflow: visible;
+    background-image: url(bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+.cardFront {
+    width: 286px;
+    height: 157px; 
+    position: absolute; 
+    top: 126px;
+    left: 4.27vw;
+    background-image: url(bg-card-front.png);
+    background-size: cover;
+    z-index: 3;
+    color: hsl(0, 0%, 100%);
+    background-repeat: no-repeat;
+    padding-inline: 20px;
+    border-radius: 0.5em;
+    box-shadow: 5px 10px 15px hsl(278, 68%, 11%, 22%);
+}
+.cardBack {
+    width: 286px;
+    height: 157px; 
+    position: absolute; 
+    top: 32px;
+    right: 4.27vw;
+    background-image: url(bg-card-back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    border-radius: 0.5em;
+    box-shadow: 5px 10px 17px hsl(278, 68%, 11%, 10%);
+}
+.cardCVC {
+    font-size: 12px;
+    color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 57px;
+    right: 39px;
+    letter-spacing: 3px;
+}
+.logocircles {
+    display: block; 
+    height: 30px;
+    width: auto; 
+    margin: 18px auto 36px 0px;
+}
+.cardNumber {
+    display: block;
+    width: 100%;
+    margin-inline: auto;
+   letter-spacing: 2px;
+}
+.cardNameDate {
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 81% 19%;
+    width: 100%;
+    margin-inline: auto;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+form {
+    display: block;
+    margin-inline: auto;
+    max-width: 450px;
+}
+.section2 {
+    display: block;
+    padding: 90px 6.4% 45px 6.4%;
+}
+.labels {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;  
+    color: hsl(278, 68%, 11%);
+    margin-bottom: 8px;
+
+}
+input {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: inherit;
+    border: 1px solid hsl(279, 6%, 55%, 50%);
+    border-radius: 12px;
+    padding-inline: 16px;
+    font-size: 14px; 
+    background-color: white;
+    z-index: 3;
+    overflow: visible;
+}
+input::placeholder {
+    font-size: 14px; 
+    color: hsl(279, 6%, 55%, 50%);
+    overflow: visible;
+}
+.borderInFocus {
+    height: 45px;
+    border-radius: 14px;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 2px;
+    background-repeat: no-repeat;
+}
+.borderInFocusImage {
+    background-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}
+input:focus, input:active, .inputError {
+    border: 0px solid hsl(279, 6%, 55%, 0%);
+    background-color: white;
+    outline: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    appearance: none; 
+}
+/* Firefox 
+input[type=number] { -moz-appearance: textfield; }*/
+
+.expdateAndcvcdiv {
+    display: grid;
+    grid-template-columns: 22% 22% 50%;
+    column-gap: 3%;
+}
+.expDatelabel {
+    grid-column: 1/span 2;
+}
+.errorText {
+    display: inline-block;
+    height: 12px;
+    color: hsl(0, 100%, 66%);
+    font-size: 11px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+.borderError {
+    background-image: linear-gradient(hsl(37, 97%, 57%), hsl(0, 100%, 66%));
+}
+button {
+    display: block;
+    width: 100%;
+    height: 53px;
+    border: 0;
+    border-radius: 0.5em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+button:hover {
+    animation: buttonAnimatoin 3s ease infinite;
+    background-image: linear-gradient(30deg, hsl(249, 99%, 64%), hsl(278, 68%, 11%));
+    background-size: 200% 200%;
+    box-shadow: 5px 5px 5px hsl(278, 94%, 30%, 30%);  
+}
+@keyframes buttonAnimatoin {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+    }
+.section3 {
+    display: none;
+    padding: 90px 6.4% 45px 6.4%;
+    text-align: center;
+    max-width: 508px;
+    margin-inline: auto;
+}
+.iconComplete {
+    display: block;
+    margin-inline: auto;
+    width: 80px;
+    height: auto;
+}
+h1 {
+    display: block;
+    margin-top: 36px;
+    text-transform: uppercase;
+    color: hsl(278, 68%, 11%);
+    font-size: 28px;
+    letter-spacing: 3.64px;
+}
+.weAdded {
+    color: hsl(279, 6%, 55%); 
+    font-size: 18px;
+    margin-bottom: 48px;
+}
+.attribution { font-size: 11px; text-align: center; margin-top: 24px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 550px) {
+    .cardFront {left: 12vw;}
+    .cardBack {right: 12vw;}
+}
+@media screen and (min-width: 800px) {
+main {
+    display: grid;
+    grid-template-columns: 33.5% 66.5%;
+}
+.section1 {  
+    width: 100%;
+    height: 100vh;
+    background-image: url(bg-main-desktop.png);
+}
+.logocircles {
+    display: block; 
+    width: 18.8%; 
+    height: auto;
+    margin: 6.26% auto 14.77% 0;
+}
+.cardFront {
+    left: 11.4vw; 
+    top: 188px;
+    width: 31vw;
+    max-width: 447px;
+    aspect-ratio: 1/ 0.55;
+    height: auto;   
+    padding-inline: 2.48vw;
+}
+.cardBack {
+    left: 18vw; 
+    top: 470px;
+    width: 31vw;
+    max-width: 447px;
+    aspect-ratio: 1/ 0.55;
+    height: auto;
+}
+.cardCVC {
+    font-size: 1.5vw;
+    position: absolute;
+    top: 5.9vw;
+    right: 4vw;
+}
+.cardNumber {
+    font-size: 1.8vw;
+    letter-spacing: 0.19vw;    
+}
+.cardNameDate {
+    font-size: 1.1vw;
+    letter-spacing: 0.1vw;
+}
+.section2 {
+    padding-top: 274px;
+}
+form {
+    width: 50%;
+    display: block;
+    margin-left: 20vw;
+}
+input, input::placeholder {
+    font-size: 1.8vw;   
+}
+.section3 {
+    align-self: center;
+    width: 50.128%;
+    margin-left: 20vw;
+}
+}
+@media screen and (min-width: 1100px) {
+ input, input::placeholder {
+    font-size: 20px;   
+}   
+}
+@media screen and (min-width: 1441px) {
+form {
+    margin-left: 290px;
+}
+.cardCVC {    
+    position: absolute; 
+    top: 88px;
+    right: 56px;
+    font-size: 20px;
+}
+.cardFront {
+    padding-inline: 32px;
+    left: 11.4%;
+}
+.cardNumber {
+    font-size: 26px;
+    letter-spacing: 4px;
+}
+.cardNameDate {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+}
+
